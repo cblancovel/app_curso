@@ -1,0 +1,16 @@
+{
+  "materials": [
+    {
+      "title": "Díptico del curso (PDF)",
+      "href": "Pograma%20Curso%20GenAI%20-%20Unidad%20de%20Innovación%20IdISSC.pdf",
+      "desc": "Información general y programa."
+    }
+  ],
+  "surveys": {
+    "day1": "",
+    "day2": "",
+    "day3": "",
+    "day4": ""
+  },
+  "liveQA": ""
+}

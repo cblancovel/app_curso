@@ -1,0 +1,76 @@
+{
+  "speakers": [
+    {
+      "name": "Julio Mayol",
+      "title": "Profesor de Cirugía (UCM)",
+      "org": "Hospital Clínico San Carlos",
+      "bio": "Director Médico e Innovación en el HCSC. Cirujano colorrectal e investigador; liderazgo en transformación digital y publicaciones quirúrgicas.",
+      "linkedin": "",
+      "photo": ""
+    },
+    {
+      "name": "Javier Viñals",
+      "title": "CEO y Fundador",
+      "org": "CareExpand",
+      "bio": "Emprendedor en telemedicina: plataforma SaaS para atención virtual y continuidad asistencial. Impulsa integraciones seguras con EHR/EMR.",
+      "linkedin": "",
+      "photo": ""
+    },
+    {
+      "name": "Frederic Llordachs",
+      "title": "CEO",
+      "org": "Llamalitica (Cofundador de Doctoralia)",
+      "bio": "Médico y MBA; cofundador de Doctoralia (Docplanner). Hoy aplica IA generativa a la relación paciente‑proveedor desde Llamalitica.",
+      "linkedin": "",
+      "photo": ""
+    },
+    {
+      "name": "Carlos Blanco Velázquez",
+      "title": "Unidad de Innovación",
+      "org": "IdISSC · HCSC",
+      "bio": "Coordina programas de IA generativa y datos sintéticos aplicados a salud. Docencia y divulgación para profesionales sanitarios.",
+      "linkedin": "",
+      "photo": ""
+    },
+    {
+      "name": "Santiago Cuenco",
+      "title": "OTC Operations Manager",
+      "org": "Unidad de Innovación · IdISSC",
+      "bio": "Gestión de operaciones y transferencia tecnológica en la Unidad de Innovación; apoyo a la Incubadora de Ideas y proyectos.",
+      "linkedin": "",
+      "photo": ""
+    },
+    {
+      "name": "Tomás Lahoz Hormigos",
+      "title": "Médico Residente (R4)",
+      "org": "Farmacología Clínica · HCSC",
+      "bio": "Interés en metodología de la investigación clínica y ética; divulgación en sesiones y webinars en el entorno IdISSC.",
+      "linkedin": "",
+      "photo": ""
+    },
+    {
+      "name": "Enrique Caso Onzain",
+      "title": "Innovation Manager",
+      "org": "Unidad de Innovación · IdISSC",
+      "bio": "Impulsa proyectos de innovación y transferencia en el entorno hospitalario, colaborando con equipos clínicos y tecnológicos.",
+      "linkedin": "",
+      "photo": ""
+    },
+{
+      "name": "Laura Llorente Sanchez",
+      "title": "Biomedical Engineer",
+      "org": "Unidad de Innovación · IdISSC",
+      "bio": "Múltiples proyectos con datos biomédicos, y lidera la transformación digital dentro del Hospital Clínico San Carlos",
+      "linkedin": "",
+      "photo": ""
+    },
+    {
+      "name": "Sergio Barrio",
+      "title": "CEO",
+      "org": "MeetingDoctors",
+      "bio": "Emprendedor en salud digital. Lidera una plataforma de telemedicina 24/7 para empresas y aseguradoras basada en chat y videollamada.",
+      "linkedin": "",
+      "photo": ""
+    }
+  ]
+}

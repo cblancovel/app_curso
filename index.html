@@ -31,28 +31,27 @@
     footer { text-align:center; color:var(--muted); padding:2rem 1rem; }
     .grid2 { display:grid; grid-template-columns:1fr; gap:1rem; }
     @media (min-width: 720px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+
+    /* Ponentes */
+    .speakers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem}
+    .speaker-card{border:1px solid #e6eef7;border-radius:16px;padding:1rem;text-align:center;cursor:pointer;transition:transform .06s ease,box-shadow .12s ease}
+    .speaker-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(10,20,30,.08)}
+    .photo-wrap{position:relative;width:96px;height:96px;margin:0 auto 10px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#eff8ff,#e6f2ff);display:flex;align-items:center;justify-content:center}
+    .photo-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo-wrap .initials{font-weight:800;color:#1e293b}
+    .speaker-name{font-weight:700}
+    .speaker-role{color:var(--muted);font-size:.9rem}
+    /* Modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(10,20,30,.4);display:flex;align-items:center;justify-content:center;padding:1rem;z-index:50}
+    .modal{background:#fff;border-radius:20px;max-width:720px;width:100%;box-shadow:0 20px 60px rgba(10,20,30,.2);position:relative}
+    .modal-body{padding:1.2rem}
+    .modal-close{position:absolute;top:.3rem;right:.6rem;border:none;background:transparent;font-size:2rem;line-height:1;cursor:pointer}
+    .modal-header{display:flex;gap:1rem;align-items:center;margin-bottom:.6rem}
+    .modal-photo{width:84px;height:84px;border-radius:14px;object-fit:cover}
+    .modal-name{font-weight:800;font-size:1.1rem}
+    .modal-role{color:var(--muted)}
+    .modal-bio{margin:.6rem 0 1rem}
   </style>
-  /* Ponentes */
-.speakers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem}
-.speaker-card{border:1px solid #e6eef7;border-radius:16px;padding:1rem;text-align:center;cursor:pointer;transition:transform .06s ease,box-shadow .12s ease}
-.speaker-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(10,20,30,.08)}
-.photo-wrap{position:relative;width:96px;height:96px;margin:0 auto 10px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#eff8ff,#e6f2ff);display:flex;align-items:center;justify-content:center}
-.photo-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-.photo-wrap .initials{font-weight:800;color:#1e293b}
-.speaker-name{font-weight:700}
-.speaker-role{color:var(--muted);font-size:.9rem}
-
-/* Modal */
-.modal-backdrop{position:fixed;inset:0;background:rgba(10,20,30,.4);display:flex;align-items:center;justify-content:center;padding:1rem;z-index:50}
-.modal{background:#fff;border-radius:20px;max-width:720px;width:100%;box-shadow:0 20px 60px rgba(10,20,30,.2);position:relative}
-.modal-body{padding:1.2rem}
-.modal-close{position:absolute;top:.3rem;right:.6rem;border:none;background:transparent;font-size:2rem;line-height:1;cursor:pointer}
-.modal-header{display:flex;gap:1rem;align-items:center;margin-bottom:.6rem}
-.modal-photo{width:84px;height:84px;border-radius:14px;object-fit:cover}
-.modal-name{font-weight:800;font-size:1.1rem}
-.modal-role{color:var(--muted)}
-.modal-bio{margin:.6rem 0 1rem}
-
 </head>
 <body>
   <header>
@@ -170,30 +169,30 @@
     </section>
 
     <section id="ponentes" role="tabpanel" aria-labelledby="tab-ponentes" hidden>
-  <div class="card">
-    <div class="block-title">Ponentes</div>
-    <div id="speakers-grid" class="speakers-grid"></div>
-    <p class="muted">Toca un ponente para ver su ficha.</p>
-  </div>
+      <div class="card">
+        <div class="block-title">Ponentes</div>
+        <div id="speakers-grid" class="speakers-grid"></div>
+        <p class="muted">Toca un ponente para ver su ficha.</p>
+      </div>
 
-  <!-- Modal -->
-  <div id="speaker-modal" class="modal-backdrop" hidden>
-    <div class="modal">
-      <button class="modal-close" aria-label="Cerrar">×</button>
-      <div class="modal-body">
-        <div class="modal-header">
-          <img id="sp-photo" class="modal-photo" alt="">
-          <div>
-            <div id="sp-name" class="modal-name"></div>
-            <div id="sp-role" class="modal-role"></div>
+      <!-- Modal -->
+      <div id="speaker-modal" class="modal-backdrop" hidden>
+        <div class="modal">
+          <button class="modal-close" aria-label="Cerrar">×</button>
+          <div class="modal-body">
+            <div class="modal-header">
+              <img id="sp-photo" class="modal-photo" alt="">
+              <div>
+                <div id="sp-name" class="modal-name"></div>
+                <div id="sp-role" class="modal-role"></div>
+              </div>
+            </div>
+            <p id="sp-bio" class="modal-bio"></p>
+            <p><a id="sp-linkedin" class="btn" target="_blank" rel="noopener">Ver perfil</a></p>
           </div>
         </div>
-        <p id="sp-bio" class="modal-bio"></p>
-        <p><a id="sp-linkedin" class="btn" target="_blank" rel="noopener">Ver perfil</a></p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section id="contacto" role="tabpanel" aria-labelledby="tab-contacto" hidden>
       <div class="card">
@@ -210,7 +209,7 @@
     </section>
   </main>
 
-  <footer>© 2025 IdISSC · Mini‑app del curso</footer>
+  <footer>© 2025 IdISSC · Mini-app del curso</footer>
 
   <script src="app.js"></script>
 </body>

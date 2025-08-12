@@ -1,21 +1,22 @@
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open('curso-ia-v1').then(cache => cache.addAll([
-      './','./index.html','./app.js','./manifest.json','./logo.png','./data/notices.json','./data/materials.json'
-    ]))
-  );
+const CACHE = 'curso-ia-v6'; // súbelo cuando hagas cambios
+const PRECACHE = [
+  './',
+  './index.html','./app.js','./manifest.json','./logo.png',
+  './data/notices.json','./data/materials.json','./data/speakers.json'
+];
+
+self.addEventListener('install', (e) => {
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)));
 });
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(resp => resp || fetch(e.request))
+
+self.addEventListener('activate', (e) => {
+  e.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+    )
   );
 });
 
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open('curso-ia-v2').then(cache => cache.addAll([
-      './','./index.html','./app.js','./manifest.json','./logo.png',
-      './data/notices.json','./data/materials.json','./data/speakers.json'
-    ]))
-  );
+self.addEventListener('fetch', (e) => {
+  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
 });

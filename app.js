@@ -75,3 +75,48 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js');
   });
 }
+
+// === Ponentes ===
+function initialsFromName(name){
+  return (name||"")
+    .split(/\s+/).map(p=>p[0]).filter(Boolean).slice(0,2)
+    .join('').toUpperCase();
+}
+
+function openSpeakerModal(s){
+  const modal=document.getElementById('speaker-modal'); if(!modal) return;
+  modal.hidden=false;
+  document.getElementById('sp-name').textContent = s.name||'';
+  document.getElementById('sp-role').textContent = [s.title,s.org].filter(Boolean).join(' · ');
+  document.getElementById('sp-bio').textContent = s.bio||'';
+  const img=document.getElementById('sp-photo');
+  if(s.photo){ img.src=s.photo; img.alt=`Foto de ${s.name}`; img.style.display='block'; }
+  else { img.removeAttribute('src'); img.alt=''; img.style.display='none'; }
+  const link=document.getElementById('sp-linkedin');
+  if(s.linkedin){ link.href=s.linkedin; link.style.display='inline-block'; }
+  else { link.style.display='none'; }
+}
+function closeSpeakerModal(){ const m=document.getElementById('speaker-modal'); if(m) m.hidden=true; }
+document.getElementById('speaker-modal')?.addEventListener('click',e=>{ if(e.target.id==='speaker-modal') closeSpeakerModal(); });
+document.querySelector('.modal-close')?.addEventListener('click', closeSpeakerModal);
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeSpeakerModal(); });
+
+loadJSON('data/speakers.json').then(data=>{
+  if(!data || !data.speakers) return;
+  const grid=document.getElementById('speakers-grid'); if(!grid) return;
+  grid.innerHTML='';
+  data.speakers.forEach(s=>{
+    const card=document.createElement('div'); card.className='speaker-card';
+    const initials=initialsFromName(s.name);
+    card.innerHTML = `
+      <div class="photo-wrap">
+        <img ${s.photo?`src="${s.photo}"`:''} alt="${s.name?`Foto de ${s.name}`:''}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="initials" style="display:${s.photo?'none':'block'}">${initials}</div>
+      </div>
+      <div class="speaker-name">${s.name||''}</div>
+      <div class="speaker-role">${[s.title,s.org].filter(Boolean).join(' · ')}</div>
+    `;
+    card.addEventListener('click', ()=> openSpeakerModal(s));
+    grid.appendChild(card);
+  });
+});

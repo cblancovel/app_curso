@@ -1,10 +1,18 @@
 {
   "speakers": [
+     {
+      "name": "Carlos Blanco Velázquez",
+      "title": "Unidad de Innovación",
+      "org": "IdISSC · HCSC",
+      "bio": "Coordina programas de IA generativa y datos sintéticos aplicados a salud. Docencia y divulgación para profesionales sanitarios.",
+      "linkedin": "",
+      "photo": "foto_Carlos.jpeg"
+    },
     {
       "name": "Julio Mayol",
-      "title": "Profesor de Cirugía (UCM)",
+      "title": "Médico de cirugía colorrectal",
       "org": "Hospital Clínico San Carlos",
-      "bio": "Director Médico e Innovación en el HCSC. Cirujano colorrectal e investigador; liderazgo en transformación digital y publicaciones quirúrgicas.",
+      "bio": "Director científico del IdIISC. Catedrático de cirugía. Cirujano colorrectal e investigador; liderazgo en transformación digital.",
       "linkedin": "",
       "photo": "foto_julio.jpg"
     },
@@ -14,21 +22,29 @@
       "org": "CareExpand",
       "bio": "Emprendedor en telemedicina: plataforma SaaS para atención virtual y continuidad asistencial. Impulsa integraciones seguras con EHR/EMR.",
       "linkedin": "",
-      "photo": ""
+      "photo": "foto_javier.jpg"
     },
     {
       "name": "Frederic Llordachs",
       "title": "CEO",
-      "org": "Llamalitica (Cofundador de Doctoralia)",
+      "org": "Llamalitica (También Cofundador de Doctoralia)",
       "bio": "Médico y MBA; cofundador de Doctoralia (Docplanner). Hoy aplica IA generativa a la relación paciente‑proveedor desde Llamalitica.",
-      "linkedin": "",
-      "photo": ""
+      "linkedin": "linkedin.com/in/llordachs",
+      "photo": "foto_fred.jpeg"
     },
     {
-      "name": "Carlos Blanco Velázquez",
-      "title": "Unidad de Innovación",
-      "org": "IdISSC · HCSC",
-      "bio": "Coordina programas de IA generativa y datos sintéticos aplicados a salud. Docencia y divulgación para profesionales sanitarios.",
+      "name": "Pablo Crespán",
+      "title": "Director Unidad de Negocio",
+      "org": "KanBai Tech",
+      "bio": "Desarrollo de negocio en Healthcare, líder en transformación digital.",
+      "linkedin": "",
+      "photo": "foto_pablocrespan.jpeg"
+    },
+    {
+      "name": "Sergio Barrio",
+      "title": "CEO",
+      "org": "MeetingDoctors",
+      "bio": "Emprendedor en salud digital. Lidera una plataforma de telemedicina 24/7 para empresas y aseguradoras basada en chat y videollamada.",
       "linkedin": "",
       "photo": ""
     },
@@ -38,15 +54,15 @@
       "org": "Unidad de Innovación · IdISSC",
       "bio": "Gestión de operaciones y transferencia tecnológica en la Unidad de Innovación; apoyo a la Incubadora de Ideas y proyectos.",
       "linkedin": "",
-      "photo": ""
+      "photo": "foto_santi.jpg"
     },
     {
       "name": "Tomás Lahoz Hormigos",
-      "title": "Médico Residente (R4)",
+      "title": "Médico",
       "org": "Farmacología Clínica · HCSC",
-      "bio": "Interés en metodología de la investigación clínica y ética; divulgación en sesiones y webinars en el entorno IdISSC.",
+      "bio": "Dilatada experiencia en el estudio de la metodología de la investigación clínica y ética; divulgación en sesiones y webinars en el entorno IdISSC.",
       "linkedin": "",
-      "photo": ""
+      "photo": "foto_tomas.jpg"
     },
     {
       "name": "Enrique Caso Onzain",
@@ -54,7 +70,7 @@
       "org": "Unidad de Innovación · IdISSC",
       "bio": "Impulsa proyectos de innovación y transferencia en el entorno hospitalario, colaborando con equipos clínicos y tecnológicos.",
       "linkedin": "",
-      "photo": ""
+      "photo": "foto_kike.jpg"
     },
 {
       "name": "Laura Llorente Sanchez",
@@ -62,15 +78,8 @@
       "org": "Unidad de Innovación · IdISSC",
       "bio": "Múltiples proyectos con datos biomédicos, y lidera la transformación digital dentro del Hospital Clínico San Carlos",
       "linkedin": "",
-      "photo": ""
-    },
-    {
-      "name": "Sergio Barrio",
-      "title": "CEO",
-      "org": "MeetingDoctors",
-      "bio": "Emprendedor en salud digital. Lidera una plataforma de telemedicina 24/7 para empresas y aseguradoras basada en chat y videollamada.",
-      "linkedin": "",
-      "photo": ""
+      "photo": "foto_laura.jpg"
     }
+    
   ]
 }

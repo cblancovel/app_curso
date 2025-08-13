@@ -1,4 +1,4 @@
-const CACHE = 'curso-ia-v6'; // súbelo cuando hagas cambios
+const CACHE = 'curso-ia-v7'; // súbelo cuando hagas cambios
 const PRECACHE = [
   './',
   './index.html','./app.js','./manifest.json','./logo.png',

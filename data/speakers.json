@@ -1,20 +1,20 @@
 {
   "speakers": [
-     {
+    {
       "name": "Carlos Blanco Velázquez",
       "title": "Unidad de Innovación",
       "org": "IdISSC · HCSC",
       "bio": "Coordina programas de IA generativa y datos sintéticos aplicados a salud. Docencia y divulgación para profesionales sanitarios.",
       "linkedin": "",
-      "photo": "foto_Carlos.jpeg"
+      "photo": "img/speakers/foto_Carlos.jpeg"
     },
     {
       "name": "Julio Mayol",
       "title": "Médico de cirugía colorrectal",
       "org": "Hospital Clínico San Carlos",
-      "bio": "Director científico del IdIISC. Catedrático de cirugía. Cirujano colorrectal e investigador; liderazgo en transformación digital.",
+      "bio": "Director científico del IdISSC. Catedrático de cirugía. Cirujano colorrectal e investigador; liderazgo en transformación digital.",
       "linkedin": "",
-      "photo": "foto_julio.jpg"
+      "photo": "img/speakers/foto_julio.jpg"
     },
     {
       "name": "Javier Viñals",
@@ -22,15 +22,15 @@
       "org": "CareExpand",
       "bio": "Emprendedor en telemedicina: plataforma SaaS para atención virtual y continuidad asistencial. Impulsa integraciones seguras con EHR/EMR.",
       "linkedin": "",
-      "photo": "foto_javier.jpg"
+      "photo": "img/speakers/foto_javier.jpg"
     },
     {
       "name": "Frederic Llordachs",
       "title": "CEO",
       "org": "Llamalitica (También Cofundador de Doctoralia)",
-      "bio": "Médico y MBA; cofundador de Doctoralia (Docplanner). Hoy aplica IA generativa a la relación paciente‑proveedor desde Llamalitica.",
-      "linkedin": "linkedin.com/in/llordachs",
-      "photo": "foto_fred.jpeg"
+      "bio": "Médico y MBA; cofundador de Doctoralia (Docplanner). Hoy aplica IA generativa a la relación paciente-proveedor desde Llamalitica.",
+      "linkedin": "https://www.linkedin.com/in/llordachs/",
+      "photo": "img/speakers/foto_fred.jpeg"
     },
     {
       "name": "Pablo Crespán",
@@ -38,7 +38,7 @@
       "org": "KanBai Tech",
       "bio": "Desarrollo de negocio en Healthcare, líder en transformación digital.",
       "linkedin": "",
-      "photo": "foto_pablocrespan.jpeg"
+      "photo": "img/speakers/foto_pablocrespan.jpeg"
     },
     {
       "name": "Sergio Barrio",
@@ -54,7 +54,7 @@
       "org": "Unidad de Innovación · IdISSC",
       "bio": "Gestión de operaciones y transferencia tecnológica en la Unidad de Innovación; apoyo a la Incubadora de Ideas y proyectos.",
       "linkedin": "",
-      "photo": "foto_santi.jpg"
+      "photo": "img/speakers/foto_santi.jpg"
     },
     {
       "name": "Tomás Lahoz Hormigos",
@@ -62,7 +62,7 @@
       "org": "Farmacología Clínica · HCSC",
       "bio": "Dilatada experiencia en el estudio de la metodología de la investigación clínica y ética; divulgación en sesiones y webinars en el entorno IdISSC.",
       "linkedin": "",
-      "photo": "foto_tomas.jpg"
+      "photo": "img/speakers/foto_tomas.jpg"
     },
     {
       "name": "Enrique Caso Onzain",
@@ -70,16 +70,15 @@
       "org": "Unidad de Innovación · IdISSC",
       "bio": "Impulsa proyectos de innovación y transferencia en el entorno hospitalario, colaborando con equipos clínicos y tecnológicos.",
       "linkedin": "",
-      "photo": "foto_kike.jpg"
+      "photo": "img/speakers/foto_kike.jpg"
     },
-{
+    {
       "name": "Laura Llorente Sanchez",
       "title": "Biomedical Engineer",
       "org": "Unidad de Innovación · IdISSC",
       "bio": "Múltiples proyectos con datos biomédicos, y lidera la transformación digital dentro del Hospital Clínico San Carlos",
       "linkedin": "",
-      "photo": "foto_laura.jpg"
+      "photo": "img/speakers/foto_laura.jpg"
     }
-    
   ]
 }

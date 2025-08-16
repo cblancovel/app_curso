@@ -4,6 +4,16 @@
       "title": "Díptico del curso (PDF)",
       "href": "Pograma%20Curso%20GenAI%20-%20Unidad%20de%20Innovación%20IdISSC.pdf",
       "desc": "Información general y programa."
+    },
+    {
+      "title": "Pre-curso: cuestionario diagnóstico",
+      "href": "https://forms.office.com/e/VhY38SZiph",
+      "desc": "Unas preguntas rápidas antes de empezar."
+    },
+    {
+      "title": "Post-curso: evaluación final",
+      "href": "https://forms.gle/TU_URL_POST",
+      "desc": "Cuéntanos qué te ha parecido"
     }
   ],
   "surveys": {

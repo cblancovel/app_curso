@@ -69,6 +69,7 @@
     <button class="tab" role="tab" aria-selected="true" aria-controls="programa" id="tab-programa">Programa</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="avisos" id="tab-avisos">Avisos</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="ponentes" id="tab-ponentes">Ponentes</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panelistas" id="tab-ponentes">Panelistas</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="encuestas" id="tab-encuestas">Encuestas</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="materiales" id="tab-materiales">Materiales</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="contacto" id="tab-contacto">Contacto</button>
@@ -195,6 +196,33 @@
         </div>
       </div>
     </section>
+
+
+    <section id="panelistas" role="tabpanel" aria-labelledby="tab-panelistas" hidden>
+  <div class="card">
+    <div class="block-title">Panelistas</div>
+    <div id="panelists-grid" class="speakers-grid"></div>
+    <p class="muted">Toca un panelista para ver su ficha.</p>
+  </div>
+
+  <!-- Modal para panelistas -->
+  <div id="panelist-modal" class="modal-backdrop" hidden>
+    <div class="modal">
+      <button class="modal-close" aria-label="Cerrar">×</button>
+      <div class="modal-body">
+        <div class="modal-header">
+          <img id="pl-photo" class="modal-photo" alt="">
+          <div>
+            <div id="pl-name" class="modal-name"></div>
+            <div id="pl-role" class="modal-role"></div>
+          </div>
+        </div>
+        <p id="pl-bio" class="modal-bio"></p>
+        <p><a id="pl-linkedin" class="btn" style="display:none" target="_blank" rel="noopener">Ver perfil</a></p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="contacto" role="tabpanel" aria-labelledby="tab-contacto" hidden>
       <!-- ... tal como lo tenías ... -->

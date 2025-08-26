@@ -5,7 +5,7 @@
       "title": "Gestor Sanitario",
       "org": "SEDISA",
       "bio": "Experto en gestión sanitaria con amplia experiencia en políticas de salud y administración pública.",
-      "photo": "img/speakers/foto_conrado.jpeg",
+      "photo": "img/speakers/foto_conrado.jpg",
       "linkedin": "linkedin.com/in/conrado-domínguez-trujillo-b1916011"
     },
     {
@@ -13,7 +13,7 @@
       "title": "Presidenta Sección Derecho Sanitario",
       "org": "ICAM",
       "bio": "Presidenta de la Sección de Derecho Sanitario del Ilustre Colegio de la Abogacía de Madrid (ICAM).",
-      "photo": "img/speakers/foto_esperanza.jpeg",
+      "photo": "img/speakers/foto_esperanza.jpg",
       "linkedin": "linkedin.com/in/esperanzamarcosj"
     },
     {
@@ -21,15 +21,15 @@
       "title": "Profesor Titular, President of EAMBES",
       "org": "Universidad Politécnica de Madrid",
       "bio": "Investigador en ingeniería biomédica y sistemas de apoyo a la decisión clínica.",
-      "photo": "img/speakers/foto_giuseppe.jpeg",
+      "photo": "img/speakers/foto_giuseppe.jpg",
       "linkedin": "linkedin.com/in/giuseppefico"
     },
     {
       "name": "David Romero",
       "title": "Business Data Analyst",
       "org": "Nueva Mutua Sanitaria",
-      "bio": "Breve bio de 2-3 frases.",
-      "photo": "img/speakers/foto_david.jpeg",
+      "bio": "Data Consultant",
+      "photo": "img/speakers/foto_david.jpg",
       "linkedin": "linkedin.com/in/david-romero-garcía-71b42b59"
     }
     

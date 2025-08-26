@@ -1,28 +1,28 @@
 {
   "panelists": [
     {
-      "name": "Conrado Domínguez",
-      "title": "Cargo / Especialidad",
+      "name": "Conrado Domínguez Trujillo",
+      "title": "Gestor Sanitario",
       "org": "SEDISA",
-      "bio": "Breve bio de 2-3 frases.",
-      "photo": "imgs/panelistas/nombre.jpg",
-      "linkedin": "https://www.linkedin.com/in/usuario"
+      "bio": "Experto en gestión sanitaria con amplia experiencia en políticas de salud y administración pública.",
+      "photo": "",
+      "linkedin": ""
     },
     {
-      "name": "Esperanza Marcos",
-      "title": "Cargo / Especialidad",
+      "name": "Esperanza Marcos Juárez",
+      "title": "Presidenta, Sección Derecho Sanitario",
       "org": "ICAM",
-      "bio": "Breve bio de 2-3 frases.",
-      "photo": "imgs/panelistas/nombre.jpg",
-      "linkedin": "https://www.linkedin.com/in/usuario"
+      "bio": "Presidenta de la Sección de Derecho Sanitario del Ilustre Colegio de la Abogacía de Madrid (ICAM).",
+      "photo": "",
+      "linkedin": ""
     },
     {
       "name": "Giuseppe Fico",
-      "title": "Cargo / Especialidad",
-      "org": "Life Supporting Technologies - UPM",
-      "bio": "Breve bio de 2-3 frases.",
-      "photo": "imgs/panelistas/nombre.jpg",
-      "linkedin": "https://www.linkedin.com/in/usuario"
+      "title": "Profesor Titular",
+      "org": "Universidad Politécnica de Madrid",
+      "bio": "Investigador en ingeniería biomédica y sistemas de apoyo a la decisión clínica.",
+      "photo": "",
+      "linkedin": ""
     },
     {
       "name": "David Romero",

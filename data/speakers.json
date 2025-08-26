@@ -49,6 +49,14 @@
       "photo": "img/speakers/foto_pablo.jpeg"
     },
     {
+      "name": "Laura Llorente Sanz",
+      "title": "Biomedical Engineer",
+      "org": "Unidad de Innovación · IdISSC",
+      "bio": "Múltiples proyectos con datos biomédicos, integración en bases de datos. Lidera la transformación digital dentro del Hospital Clínico San Carlos",
+      "linkedin": "https://www.linkedin.com/in/laura-llorente-sanz?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDFBgrIJ4QiygEbGSuSHluw%3D%3D",
+      "photo": "img/speakers/foto_laura.jpg"
+    },
+    {
       "name": "Santiago Cuenco",
       "title": "OTC Operations Manager",
       "org": "Unidad de Innovación · IdISSC",
@@ -71,14 +79,7 @@
       "bio": "Impulsa proyectos de innovación y transferencia en el entorno hospitalario, colaborando con equipos clínicos y tecnológicos.",
       "linkedin": "https://www.linkedin.com/in/enrique-caso-onzain-93881062?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZsoBaw%2FiSd2mmMc2ejApyA%3D%3D",
       "photo": "img/speakers/foto_kike.jpg"
-    },
-    {
-      "name": "Laura Llorente Sanz",
-      "title": "Biomedical Engineer",
-      "org": "Unidad de Innovación · IdISSC",
-      "bio": "Múltiples proyectos con datos biomédicos, integración en bases de datos. Lidera la transformación digital dentro del Hospital Clínico San Carlos",
-      "linkedin": "https://www.linkedin.com/in/laura-llorente-sanz?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDFBgrIJ4QiygEbGSuSHluw%3D%3D",
-      "photo": "img/speakers/foto_laura.jpg"
     }
+    
   ]
 }

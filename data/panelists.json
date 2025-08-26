@@ -1,6 +1,14 @@
 {
   "panelists": [
     {
+      "name": "Carlos Zarco",
+        "title": "Director Médico Hospital Universitario Moncloa",
+      "org": "HLA",
+      "bio": "Director Médico, Miembro del Comité de Bioética y Derecho Sanitario de ASISA, Director General de la Fundación Espriu, Miembro junta directiva CEPES.",
+      "photo": "img/speakers/foto_zarco.jpg",
+      "linkedin": "linkedin.com/in/carlos-zarco-29436545"
+    },
+    {
       "name": "Conrado Domínguez Trujillo",
       "title": "Gestor Sanitario",
       "org": "SEDISA",

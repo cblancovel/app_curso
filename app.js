@@ -118,5 +118,62 @@ loadJSON('data/speakers.json').then(data=>{
     `;
     card.addEventListener('click', ()=> openSpeakerModal(s));
     grid.appendChild(card);
+
+
+  
+// === Panelistas (nuevo) ===
+function openPanelistModal(p){
+  const modal = document.getElementById('panelist-modal'); 
+  if(!modal) return;
+  modal.hidden = false;
+  const nameEl = modal.querySelector('#pl-name');
+  const roleEl = modal.querySelector('#pl-role');
+  const bioEl  = modal.querySelector('#pl-bio');
+  const img    = modal.querySelector('#pl-photo');
+  const link   = modal.querySelector('#pl-linkedin');
+
+  if (nameEl) nameEl.textContent = p.name || '';
+  if (roleEl) roleEl.textContent = [p.title, p.org].filter(Boolean).join(' · ');
+  if (bioEl)  bioEl.textContent  = p.bio || '';
+
+  if (img){
+    if(p.photo){ img.src = p.photo; img.alt = `Foto de ${p.name||''}`; img.style.display = 'block'; }
+    else { img.removeAttribute('src'); img.alt=''; img.style.display='none'; }
+  }
+  if (link){
+    if(p.linkedin){ link.href = p.linkedin; link.style.display='inline-block'; }
+    else { link.style.display='none'; }
+  }
+}
+function closePanelistModal(){ 
+  const m = document.getElementById('panelist-modal'); 
+  if(m) m.hidden = true; 
+}
+document.getElementById('panelist-modal')?.addEventListener('click', e => { 
+  if (e.target.id === 'panelist-modal') closePanelistModal(); 
+});
+document.getElementById('panelist-modal')?.querySelector('.modal-close')?.addEventListener('click', closePanelistModal);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanelistModal(); });
+
+loadJSON('data/panelists.json').then(data=>{
+  if(!data || !data.panelists) return;
+  const grid = document.getElementById('panelists-grid'); 
+  if(!grid) return;
+  grid.innerHTML = '';
+  data.panelists.forEach(p=>{
+    const card = document.createElement('div'); 
+    card.className = 'speaker-card';
+    const initials = initialsFromName(p.name);
+    card.innerHTML = `
+      <div class="photo-wrap">
+        <img ${p.photo?`src="${p.photo}"`:''} alt="${p.name?`Foto de ${p.name}`:''}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="initials" style="display:${p.photo?'none':'block'}">${initials}</div>
+      </div>
+      <div class="speaker-name">${p.name||''}</div>
+      <div class="speaker-role">${[p.title,p.org].filter(Boolean).join(' · ')}</div>
+    `;
+    card.addEventListener('click', ()=> openPanelistModal(p));
+    grid.appendChild(card);
+
   });
 });

@@ -1,0 +1,37 @@
+{
+  "panelists": [
+    {
+      "name": "Conrado Domínguez",
+      "title": "Cargo / Especialidad",
+      "org": "SEDISA",
+      "bio": "Breve bio de 2-3 frases.",
+      "photo": "imgs/panelistas/nombre.jpg",
+      "linkedin": "https://www.linkedin.com/in/usuario"
+    },
+    {
+      "name": "Esperanza Marcos",
+      "title": "Cargo / Especialidad",
+      "org": "ICAM",
+      "bio": "Breve bio de 2-3 frases.",
+      "photo": "imgs/panelistas/nombre.jpg",
+      "linkedin": "https://www.linkedin.com/in/usuario"
+    },
+    {
+      "name": "Giuseppe Fico",
+      "title": "Cargo / Especialidad",
+      "org": "Life Supporting Technologies - UPM",
+      "bio": "Breve bio de 2-3 frases.",
+      "photo": "imgs/panelistas/nombre.jpg",
+      "linkedin": "https://www.linkedin.com/in/usuario"
+    },
+    {
+      "name": "David Romero",
+      "title": "Cargo / Especialidad",
+      "org": "Life Supporting Technologies - UPM",
+      "bio": "Breve bio de 2-3 frases.",
+      "photo": "imgs/panelistas/nombre.jpg",
+      "linkedin": "https://www.linkedin.com/in/usuario"
+    }
+    
+  ]
+}

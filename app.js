@@ -18,10 +18,10 @@ if (hash) {
   if (t) t.click();
 }
 
-// Load notices/materials
+// Load JSON helper
 async function loadJSON(path) {
   try {
-    const res = await fetch(path);
+    const res = await fetch(path, { cache: "no-store" });
     return await res.json();
   } catch (e) {
     return null;
@@ -32,16 +32,18 @@ async function loadJSON(path) {
 loadJSON('data/notices.json').then(data => {
   if (!data) return;
   const wrap = document.getElementById('avisos-list');
-  wrap.innerHTML = '';
-  data.notices.forEach(n => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `<div class="pill">${n.date}</div><div class="block-title">${n.title}</div><div class="muted">${n.body}</div>`;
-    wrap.appendChild(card);
-  });
+  if (wrap) {
+    wrap.innerHTML = '';
+    (data.notices || []).forEach(n => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `<div class="pill">${n.date||''}</div><div class="block-title">${n.title||''}</div><div class="muted">${n.body||''}</div>`;
+      wrap.appendChild(card);
+    });
+  }
   if (data.channel) {
     const link = document.getElementById('canal-link');
-    link.href = data.channel;
+    if (link) link.href = data.channel;
   }
 });
 
@@ -49,23 +51,25 @@ loadJSON('data/notices.json').then(data => {
 loadJSON('data/materials.json').then(data => {
   if (!data) return;
   const wrap = document.getElementById('materiales-list');
-  wrap.innerHTML = '';
-  data.materials.forEach(m => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `<div class="block-title">${m.title}</div><div class="muted">${m.desc||''}</div><p><a class="btn" href="${m.href}" target="_blank" rel="noopener">Abrir</a></p>`;
-    wrap.appendChild(card);
-  });
+  if (wrap) {
+    wrap.innerHTML = '';
+    (data.materials || []).forEach(m => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `<div class="block-title">${m.title||''}</div><div class="muted">${m.desc||''}</div><p><a class="btn" href="${m.href||'#'}" target="_blank" rel="noopener">Abrir</a></p>`;
+      wrap.appendChild(card);
+    });
+  }
   // surveys & live Q&A
   if (data.surveys) {
-    ['day1','day2','day3','day4'].forEach((k,i)=>{
+    ['day1','day2','day3','day4'].forEach((k)=>{
       const el = document.getElementById(`survey-${k}`);
       if (el && data.surveys[k]) el.href = data.surveys[k];
     });
   }
   if (data.liveQA) {
     const l = document.getElementById('live-qa');
-    l.href = data.liveQA;
+    if (l) l.href = data.liveQA;
   }
 });
 
@@ -76,38 +80,61 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// === Ponentes ===
+// === Util común ===
 function initialsFromName(name){
   return (name||"")
-    .split(/\s+/).map(p=>p[0]).filter(Boolean).slice(0,2)
-    .join('').toUpperCase();
+    .trim()
+    .split(/\s+/)
+    .map(p=>p[0])
+    .filter(Boolean)
+    .slice(0,2)
+    .join('')
+    .toUpperCase();
 }
 
+// === Ponentes ===
 function openSpeakerModal(s){
-  const modal=document.getElementById('speaker-modal'); if(!modal) return;
-  modal.hidden=false;
-  document.getElementById('sp-name').textContent = s.name||'';
-  document.getElementById('sp-role').textContent = [s.title,s.org].filter(Boolean).join(' · ');
-  document.getElementById('sp-bio').textContent = s.bio||'';
-  const img=document.getElementById('sp-photo');
-  if(s.photo){ img.src=s.photo; img.alt=`Foto de ${s.name}`; img.style.display='block'; }
-  else { img.removeAttribute('src'); img.alt=''; img.style.display='none'; }
-  const link=document.getElementById('sp-linkedin');
-  if(s.linkedin){ link.href=s.linkedin; link.style.display='inline-block'; }
-  else { link.style.display='none'; }
+  const modal = document.getElementById('speaker-modal'); 
+  if(!modal) return;
+  modal.hidden = false;
+  const nameEl = modal.querySelector('#sp-name');
+  const roleEl = modal.querySelector('#sp-role');
+  const bioEl  = modal.querySelector('#sp-bio');
+  const img    = modal.querySelector('#sp-photo');
+  const link   = modal.querySelector('#sp-linkedin');
+
+  if (nameEl) nameEl.textContent = s.name || '';
+  if (roleEl) roleEl.textContent = [s.title, s.org].filter(Boolean).join(' · ');
+  if (bioEl)  bioEl.textContent  = s.bio || '';
+
+  if (img){
+    if(s.photo){ img.src = s.photo; img.alt = `Foto de ${s.name||''}`; img.style.display = 'block'; }
+    else { img.removeAttribute('src'); img.alt=''; img.style.display='none'; }
+  }
+  if (link){
+    if(s.linkedin){ link.href = s.linkedin; link.style.display='inline-block'; }
+    else { link.style.display='none'; }
+  }
 }
-function closeSpeakerModal(){ const m=document.getElementById('speaker-modal'); if(m) m.hidden=true; }
-document.getElementById('speaker-modal')?.addEventListener('click',e=>{ if(e.target.id==='speaker-modal') closeSpeakerModal(); });
-document.querySelector('.modal-close')?.addEventListener('click', closeSpeakerModal);
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeSpeakerModal(); });
+function closeSpeakerModal(){ 
+  const m = document.getElementById('speaker-modal'); 
+  if(m) m.hidden = true; 
+}
+document.getElementById('speaker-modal')?.addEventListener('click', e => { 
+  if (e.target.id === 'speaker-modal') closeSpeakerModal(); 
+});
+document.getElementById('speaker-modal')?.querySelector('.modal-close')?.addEventListener('click', closeSpeakerModal);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSpeakerModal(); });
 
 loadJSON('data/speakers.json').then(data=>{
   if(!data || !data.speakers) return;
-  const grid=document.getElementById('speakers-grid'); if(!grid) return;
-  grid.innerHTML='';
+  const grid = document.getElementById('speakers-grid'); 
+  if(!grid) return;
+  grid.innerHTML = '';
   data.speakers.forEach(s=>{
-    const card=document.createElement('div'); card.className='speaker-card';
-    const initials=initialsFromName(s.name);
+    const card = document.createElement('div'); 
+    card.className = 'speaker-card';
+    const initials = initialsFromName(s.name);
     card.innerHTML = `
       <div class="photo-wrap">
         <img ${s.photo?`src="${s.photo}"`:''} alt="${s.name?`Foto de ${s.name}`:''}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -118,9 +145,9 @@ loadJSON('data/speakers.json').then(data=>{
     `;
     card.addEventListener('click', ()=> openSpeakerModal(s));
     grid.appendChild(card);
+  });
+});
 
-
-  
 // === Panelistas (nuevo) ===
 function openPanelistModal(p){
   const modal = document.getElementById('panelist-modal'); 
@@ -174,6 +201,6 @@ loadJSON('data/panelists.json').then(data=>{
     `;
     card.addEventListener('click', ()=> openPanelistModal(p));
     grid.appendChild(card);
-
   });
 });
+

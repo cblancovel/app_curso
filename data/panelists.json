@@ -10,7 +10,7 @@
     },
     {
       "name": "Esperanza Marcos Juárez",
-      "title": "Presidenta, Sección Derecho Sanitario",
+      "title": "Presidenta Sección Derecho Sanitario",
       "org": "ICAM",
       "bio": "Presidenta de la Sección de Derecho Sanitario del Ilustre Colegio de la Abogacía de Madrid (ICAM).",
       "photo": "",
@@ -26,11 +26,11 @@
     },
     {
       "name": "David Romero",
-      "title": "Cargo / Especialidad",
+      "title": "Business Data Analyst",
       "org": "Life Supporting Technologies - UPM",
       "bio": "Breve bio de 2-3 frases.",
-      "photo": "imgs/panelistas/nombre.jpg",
-      "linkedin": "https://www.linkedin.com/in/usuario"
+      "photo": "",
+      "linkedin": ""
     }
     
   ]

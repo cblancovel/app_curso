@@ -39,6 +39,14 @@
       "bio": "Data Consultant",
       "photo": "img/speakers/foto_david.jpg",
       "linkedin": "https://www.linkedin.com/in/david-romero-garc%C3%ADa-71b42b59/"
+    },
+    {
+      "name": "Carlos Blanco",
+      "title": "Director médico",
+      "org": "Caser",
+      "bio": "Médico, proveedor de servicios médicos y director médico en Caser",
+      "photo": "img/speakers/foto_drblanco.jpeg",
+      "linkedin": "https://www.linkedin.com/in/carlos-blanco-andres-0460ab13a/"
     }
     
   ]

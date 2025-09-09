@@ -1,6 +1,11 @@
 {
   "channel": "",
   "notices": [
+     {
+      "date": "2025-09-09",
+      "title": "Dispositivo",
+      "body": "Se recomienda acudir con portátil cargado, en su defecto tablet/ipad, por favor. Prácticamente no hay disponibilidad de enchufes."
+    },
     {
       "date": "2025-09-01",
       "title": "Cuestionario previo al curso",
